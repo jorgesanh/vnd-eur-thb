@@ -42,7 +42,7 @@
 
   body {
     display: grid;
-    grid-template-rows: auto 1fr auto auto;
+    grid-template-rows: auto auto auto 1fr;
     height: 100dvh;
     max-width: 480px;
     margin: 0 auto;
@@ -173,8 +173,11 @@
     grid-auto-rows: 1fr;
     gap: 8px;
     padding: 4px 0;
-    height: 46dvh;
-    max-height: 420px;
+    min-height: 0;
+    max-height: 520px;
+    align-self: end;
+    width: 100%;
+    height: 100%;
   }
 
   .key {
@@ -214,7 +217,7 @@
     .row-label { margin-bottom: 2px; }
     .row-amount { font-size: clamp(24px, 7.5vw, 34px); }
     .display { gap: 6px; }
-    .numpad { gap: 6px; height: 42dvh; }
+    .numpad { gap: 6px; }
     .key { font-size: 26px; border-radius: 12px; }
     .key.action { font-size: 22px; }
     .key.multi-zero { font-size: 22px; }
